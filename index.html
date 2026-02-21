@@ -1,68 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitLife Game</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Bit Life 2</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to BitLife</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#career">Career</a></li>
-                <li><a href="#love">Love</a></li>
-                <li><a href="#shopping">Shopping</a></li>
-                <li><a href="#status">Status</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>Cheating Mechanics Update</h1>
+    <div>
+        <h2>Cheat Buttons</h2>
+        <button onclick="cheat()">Cheat on Spouse</button>
+        <button onclick="getCaught()">Get Caught</button>
+        <button onclick="divorce()">Divorce</button>
+    </div>
+    <script>
+        function cheat() {
+            // Lower happiness and relationship status on cheating
+            alert('Cheating has led to a decrease in happiness and relationship status.');
+            // Additional in-game logic for cheating
+            updateHappiness(-20);
+            updateRelationship(-30);
+        }
 
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to your new life! Make the best choices.</p>
-        </section>
+        function getCaught() {
+            // Consequences of getting caught
+            alert('You have been caught cheating! Your relationship has suffered.');
+            updateRelationship(-50);
+            triggerDramaEvent();
+        }
 
-        <section id="career">
-            <h2>Career</h2>
-            <p>Select a job from the list below:</p>
-            <select id="job-select">
-                <option value="">Choose your job</option>
-                <option value="doctor">Doctor</option>
-                <option value="engineer">Engineer</option>
-                <option value="artist">Artist</option>
-            </select>
-            <button onclick="chooseJob()">Choose Job</button>
-        </section>
+        function divorce() {
+            // Options for divorce
+            alert('You decided to divorce your spouse. This will significantly affect your happiness.');
+            updateRelationship(-100);
+            updateHappiness(-50);
+        }
 
-        <section id="love">
-            <h2>Love</h2>
-            <p>Start a relationship and date others.</p>
-            <button onclick="startDating()">Find a Partner</button>
-        </section>
+        function updateHappiness(amount) {
+            // Logic for updating happiness
+        }
 
-        <section id="shopping">
-            <h2>Shopping</h2>
-            <p>Buy homes and cars:</p>
-            <ul>
-                <li><button onclick="buyHome()">Buy a Home</button></li>
-                <li><button onclick="buyCar()">Buy a Car</button></li>
-            </ul>
-        </section>
+        function updateRelationship(amount) {
+            // Logic for updating relationship status
+        }
 
-        <section id="status">
-            <h2>Status</h2>
-            <p>Your current status:</p>
-            <div id="status-display"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 BitLife Game</p>
-    </footer>
+        function triggerDramaEvent() {
+            // Logic for triggering drama events
+            alert('A drama event has occurred due to your actions.');
+        }
+    </script>
 </body>
 </html>
