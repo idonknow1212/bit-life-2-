@@ -1,1 +1,68 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Bit Life 2</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }\n        header { background: #0077cc; color: white; padding: 10px 20px; }\n        nav { margin: 20px 0; }\n        nav a { margin: 0 15px; text-decoration: none; color: #0077cc; }\n        section { padding: 20px; }\n    </style>\n</head>\n<body>\n    <header>\n        <h1>Welcome to Bit Life 2</h1>\n        <nav>\n            <a href="#home">Home</a>\n            <a href="#career">Career</a>\n            <a href="#relationships">Relationships</a>\n            <a href="#shopping">Shopping</a>\n            <a href="#status">Status</a>\n        </nav>\n    </header>\n    <section id="home">\n        <h2>Home</h2>\n        <p>Welcome to your virtual life simulation.</p>\n    </section>\n    <section id="career">\n        <h2>Career</h2>\n        <p>Choose your dream job!</p>\n    </section>\n    <section id="relationships">\n        <h2>Relationships</h2>\n        <p>Explore love and dating!</p>\n        <div>\n            <h3>Relationship Progression</h3>\n            <p>Build relationships, get married, or go through divorce.</p>\n            <h4>Character Profiles:</h4>\n            <ul>\n                <li>Profile 1: Alex - A charming person with interests in music.</li>\n                <li>Profile 2: Jamie - A passionate individual who loves adventures.</li>\n            </ul>\n            <h4>Romance Events:</h4>\n            <p>Engage in events that can strengthen or weaken your relationships.</p>\n            <h4>Relationship Stats:</h4>\n            <p>Monitor your relationship health and progression.</p>\n        </div>\n    </section>\n    <section id="shopping">\n        <h2>Shopping</h2>\n        <p>Buy items to enhance your life.</p>\n    </section>\n    <section id="status">\n        <h2>Status</h2>\n        <p>Check your current life status.</p>\n    </section>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitLife Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to BitLife</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#love">Love</a></li>
+                <li><a href="#shopping">Shopping</a></li>
+                <li><a href="#status">Status</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to your new life! Make the best choices.</p>
+        </section>
+
+        <section id="career">
+            <h2>Career</h2>
+            <p>Select a job from the list below:</p>
+            <select id="job-select">
+                <option value="">Choose your job</option>
+                <option value="doctor">Doctor</option>
+                <option value="engineer">Engineer</option>
+                <option value="artist">Artist</option>
+            </select>
+            <button onclick="chooseJob()">Choose Job</button>
+        </section>
+
+        <section id="love">
+            <h2>Love</h2>
+            <p>Start a relationship and date others.</p>
+            <button onclick="startDating()">Find a Partner</button>
+        </section>
+
+        <section id="shopping">
+            <h2>Shopping</h2>
+            <p>Buy homes and cars:</p>
+            <ul>
+                <li><button onclick="buyHome()">Buy a Home</button></li>
+                <li><button onclick="buyCar()">Buy a Car</button></li>
+            </ul>
+        </section>
+
+        <section id="status">
+            <h2>Status</h2>
+            <p>Your current status:</p>
+            <div id="status-display"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BitLife Game</p>
+    </footer>
+</body>
+</html>
